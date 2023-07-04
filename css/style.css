@@ -2,32 +2,45 @@
 :root {
     --color-main: #b99150;
     --color-orange: #ffaf18;
-    ;
 }
-
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Muller";
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/open-sans-v26-latin_cyrillic-regular.eot');
-    /* IE9 Compat Modes */
-    src: local(''), url('../fonts/open-sans-v26-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../fonts/open-sans-v26-latin_cyrillic-regular.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/open-sans-v26-latin_cyrillic-regular.woff') format('woff'),
-        /* Modern Browsers */
-        url('../fonts/open-sans-v26-latin_cyrillic-regular.ttf') format('truetype'),
-        /* Safari, Android, iOS */
-        url('../fonts/open-sans-v26-latin_cyrillic-regular.svg#OpenSans') format('svg');
-    /* Legacy iOS */
+    src: local("Muller"),
+        url('../fonts/MullerRegular.woff2') format('woff2'),
+        url('../fonts/MullerRegular.woff') format('woff'),
+        url('../fonts/MullerRegular.ttf') format('truetype'),
+        url('../fonts/MullerRegular.eot') format('embedded-opentype');
 }
 
+@font-face {
+    font-family: "Muller";
+    font-style: normal;
+    font-weight: 900;
+    src: local("Muller"),
+        url('../fonts/MullerBold.woff2') format('woff2'),
+        url('../fonts/MullerBold.woff') format('woff'),
+        url('../fonts/MullerBold.ttf') format('truetype'),
+        url('../fonts/MullerBold.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: "Muller";
+    font-style: normal;
+    font-weight: 800;
+    src: local("Muller"),
+        url('../fonts/MullerExtraBold.woff2') format('woff2'),
+        url('../fonts/MullerExtraBold.woff') format('woff'),
+        url('../fonts/MullerExtraBold.ttf') format('truetype'),
+        url('../fonts/MullerExtraBold.eot') format('embedded-opentype');
+}
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Muller", "Arial", sans-serif;
     color: var(--color-main);
+    font-size: 16px;
 }
 
 *,
@@ -71,9 +84,10 @@ input {
     cursor: pointer;
 }
 
-.h1, h2, h3, p {
+h1, h2, h3, p {
     padding: 0;
     margin: 0;
+    font-size: inherit;
 }
 
 .container {
@@ -86,6 +100,7 @@ input {
     text-align: center;
     color: black;
     background-color: var(--color-orange);
+    font-weight: 700;
 }
 
 
@@ -98,13 +113,13 @@ input {
 
 .header__container {
     display: flex;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     align-items: center;
 }
 
 .header__logo {
-    margin-right: 230px;
+    margin-right: 240px;
 }
 
 .nav__list {
@@ -120,8 +135,12 @@ input {
 .hero {
     display: flex;
     gap: 20px;
-    padding-top: 130px;
-    padding-bottom: 80px;
+    padding-top: 127px;
+    padding-bottom: 79px;
+}
+
+.hero__content {
+    min-width: 660px;
 }
 
 .hero__container {
@@ -137,7 +156,10 @@ input {
 }
 
 .hero__title {
-    margin-bottom: 60px;
+    margin-bottom: 42px;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 1.2;
 }
 
 .hero__title span {
@@ -146,20 +168,21 @@ input {
 
 .hero__list {
     display: grid;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     grid-template-columns: repeat(2, minmax(auto, 300px));
-    gap: 30px;
+    row-gap: 37px;
+    column-gap: 48px;
 }
 
 .hero__item {
-    padding-left: 78px;
+    padding-left: 80px;
     background-repeat: no-repeat;
     background-position: left 5px;
 }
 
 .advantage__title {
-    margin-bottom: 10px;
     color: var(--color-orange);
+    font-weight: 700;
 }
 
 .dough {
@@ -181,20 +204,22 @@ input {
 .hero__button {
     max-width: 250px;
     min-height: 60px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 53px;
+    padding-right: 53px;
 }
 
 /* pizza */
 
 .pizza {
-    padding-top: 80px;
+    padding-top: 79px;
     padding-bottom: 118px;
 }
 
 .pizza__title {
-    margin-bottom: 60px;
+    margin-bottom: 54px;
     text-align: center;
+    font-weight: 700;
+    font-size: 35px;
 }
 
 .pizza__list {
@@ -202,34 +227,44 @@ input {
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 24px;
-    row-gap: 20px;
+    row-gap: 23px;
 }
 
 .pizza__item {
     display: flex;
     max-width: 274px;
-    min-height: 354px;
-    padding: 15px 20px;
+    min-height: 357px;
+    padding-left:17px;
+    padding-right:17px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 3px 14px 1px rgba(152, 152, 152, 0.2);
 }
 
 .pizza__image {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    min-height: 155px;
+    object-fit: none;
 }
+
 
 .pizza__name {
     margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .pizza__compound {
     margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .pizza__name,
 .pizza__compound {
     text-align: center;
+    color: black;
 }
 
 .pizza__button {
@@ -241,20 +276,20 @@ input {
 /* call */
 
 .call {
-    padding-top: 183px;
+    padding-top: 113px;
     padding-bottom: 104px;
     overflow: hidden;
 }
 
 .call__container {
-position: relative;    
+    position: relative;
 }
 
 .call__container::after {
     position: absolute;
     content: '';
-    right: -7%;
-    top: -80px;
+    right: -9%;
+    top: -60px;
     width: 410px;
     height: 454px;
     background-image: url('../img/call/pizza.png');
@@ -263,29 +298,36 @@ position: relative;
     z-index: -1;
 }
 
-.call__text {
-    max-width: 384px;
+.call__title {
+    margin-bottom: 7px;
+    color: var(--color-orange);
+    font-weight: 800;
+    font-size: 35px;
 }
 
-.call__title {
-    color: var(--color-orange);
+.call__text {
+    max-width: 384px;
+    line-height: 1.5;
 }
 
 .call__content {
     display: flex;
-    gap: 125px;
+    gap: 126px;
 }
 
 .call__subtitle {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 1.2;
 }
 
 .form {
-    display: flex;   
-     max-width: 325px;
+    display: flex;
+    max-width: 330px;
     flex-direction: column;
     flex-grow: 1;
-    gap: 24px;
+    gap: 25px;
 }
 
 .form__input,
@@ -301,5 +343,5 @@ position: relative;
 
 .form__input::placeholder {
     color: var(--color-main);
+    font-size: 18px;
 }
-
