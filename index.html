@@ -142,16 +142,26 @@
                             не&nbsp;остался голодный!</p>
                     </div>
                     <form action="/" class="call__form form">
-                        <input type="text" class="form__input" name="name" placeholder="Ваше имя"  aria-label="Имя">
-                        <input type="text" class="form__input" name="adress" placeholder="Адрес доставки"  aria-label="Адрес">
-                        <input type="text" class="form__input" name="phone" placeholder="Телефон"  aria-label="Телефон">
+                        <div class="input-group">
+                            <input type="text" class="form__input" name="name" placeholder="Ваше имя" aria-label="Имя">
+                            <label class="form__label" for="name"></label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form__input" name="address" placeholder="Адрес доставки" aria-label="Адрес">
+                            <label class="form__label" for="address"></label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form__input" name="phone" placeholder="Телефон" aria-label="Телефон">
+                            <label class="form__label" for="phone"></label>
+                        </div>
                         <button class="form__button btn" aria-label="Оформить заказ">Оформить заказ</button>
                     </form>
                 </div>
-
             </div>
-
         </section>
     </main>
+    <div class="popup" data-target="thanks">
+          <p class="popup__text">Спасибо за заказ!</p>
+    </div>
 </body>
 </html>

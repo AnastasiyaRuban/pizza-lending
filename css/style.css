@@ -417,3 +417,27 @@ h1, h2, h3, p {
     color: var(--color-main);
     font-size: 18px;
 }
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label {
+    color: red;
+}
+
+.popup[data-target="thanks"] {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-main);
+    padding: 20px;
+    color: white;
+}
+
+.popup[data-target="thanks"].open {
+    display: block;
+}
