@@ -6,7 +6,9 @@
 
     /* header */
     .header__container {
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .header__logo {
@@ -23,18 +25,22 @@
     }
 
     .hero__list {
-        column-gap: 15px;
+        -webkit-column-gap: 15px;
+           -moz-column-gap: 15px;
+                column-gap: 15px;
     }
 
     /* pizza */
     .pizza__list {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
     }
 
     .pizza__image {
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
     }
 
 }
@@ -53,11 +59,15 @@
 
     .hero__content {
         min-width: 0;
-        flex: 0 1 50%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
     }
 
     .hero__back {
-        flex: 0 1 50%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
     }
 
     .hero__title {
@@ -72,6 +82,7 @@
 
 
     .hero__list {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
@@ -128,12 +139,16 @@
         padding-bottom: 42px;
         margin-bottom: 0;
         z-index: 10;
+        -webkit-transition: right 0.5s ease-in-out;
+        -o-transition: right 0.5s ease-in-out;
         transition: right 0.5s ease-in-out;
         background-color: white;
     }
 
     .menu__list {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: auto 30px auto;
         grid-template-columns: repeat(2, auto);
         gap: 30px;
     }
@@ -152,7 +167,9 @@
 
     /* hero */
     .hero__content {
-        flex: 1 1 100%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
     }
 
     .hero__back {
@@ -174,7 +191,10 @@
 
     /* call */
     .call__content {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 15px;
     }
 
@@ -207,6 +227,7 @@
 
     /* pizza */
     .pizza__list {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
