@@ -370,8 +370,8 @@ h1, h2, h3, p {
 }
 
 .pizza__item:hover {
-    -webkit-animation: pulse 2s ;
-            animation: pulse 2s ;
+    -webkit-animation: 2s pulse;
+            animation: 2s pulse;
 }
 
 @-webkit-keyframes pulse {
