@@ -1,7 +1,7 @@
 # Лендинг Pizza Chef
 ![](https://img.shields.io/badge/version-1.0.0-green)
 
-[Посетить сайт Blanchard](https://anastasiyaruban.github.io/pizza-lending/)
+[Посетить сайт Pizza Chef](https://anastasiyaruban.github.io/pizza-lending/)
 
 **Стек:** HTML, CSS, JS, плагин для анимации Wow.js
 
