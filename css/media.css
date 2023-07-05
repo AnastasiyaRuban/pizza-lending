@@ -195,10 +195,6 @@
     .modal__body {
         width: 80%;
     }
-
-    .modal__image {
-        width: 50%;
-    }
 }
 
 @media (max-width: 425px) {
@@ -216,10 +212,6 @@
 
     /* modal */
     .modal__body {
-        width: 100%;
-    }
-
-    .modal__image {
         width: 100%;
     }
 }

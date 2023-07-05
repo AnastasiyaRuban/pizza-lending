@@ -476,7 +476,6 @@ dialog[open] {
 }
 
 .modal__image {
-    width: 80%;
     object-fit: contain;
 }
 
